@@ -9,7 +9,7 @@ public class Casting {
 		byte v3 = (byte)v1;
 		System.out.println("v3: " + v3);
 		
-		char v5 = '한';
+		char v5 = '3';
 		int v6 = 'A';
 		int v7 = 'b';
 		System.out.println("v5: " + v5);
