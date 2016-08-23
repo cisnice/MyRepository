@@ -9,9 +9,9 @@ public class Casting {
 		byte v3 = (byte)v1;
 		System.out.println("v3: " + v3);
 		
-		char v5 = 'ÇÑ';
+		char v5 = 'í•œ';
 		int v6 = 'A';
-		int v7 = 'ÇÑ';
+		int v7 = 'b';
 		System.out.println("v5: " + v5);
 		System.out.println("v6: " + v6);
 		System.out.println("v7: " + v7);
