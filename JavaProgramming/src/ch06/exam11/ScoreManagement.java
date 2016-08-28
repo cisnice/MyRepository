@@ -16,11 +16,11 @@ public class ScoreManagement {
 			System.out.println("------------------------------------------------------------------------");
 			System.out.print("선택: ");
 			String choice = scanner.nextLine();
-			if( choice.equals("1") ) {
+			if( choice.equals("1") ) {								//1. 총 학생 수 
 				System.out.print("총 학생 수: ");
 				int totalNum = Integer.parseInt(scanner.nextLine());
 				students = new Student[totalNum];
-			} else if( choice.equals("2") ) {
+			} else if( choice.equals("2") ) {						//2. 목록
 				System.out.println("*********************************************");
 				System.out.println("학번\t\t이름\t\t점수");
 				System.out.println("*********************************************");
@@ -30,7 +30,7 @@ public class ScoreManagement {
 						System.out.println(student.no + "\t\t" + student.name + "\t\t" + student.score);
 					}
 				}
-			} else if( choice.equals("3") ) {
+			} else if( choice.equals("3") ) {						//3. 입력
 				System.out.print("이름 : ");
 				String name = scanner.nextLine();
 				System.out.print("점수: ");
@@ -41,11 +41,11 @@ public class ScoreManagement {
 						break;
 					}
 				}
-			} else if( choice.equals("4") ) {
+			} else if( choice.equals("4") ) {						//4. 삭제
 				System.out.print("삭제할 학생의 학번: ");
 				int sno = Integer.parseInt(scanner.nextLine());
 				students[sno] = null;
-			} else if( choice.equals("5") ) {
+			} else if( choice.equals("5") ) {						//5. 최고 점수
 				int max = 0;
 				for(Student student : students) {
 					if(student != null) {
@@ -68,8 +68,8 @@ public class ScoreManagement {
 						}
 					}
 				}
-			} else if( choice.equals("6") ) {
-				int count = 0;
+			} else if( choice.equals("6") ) {						//6. 평균
+				int count = 0;	
 				int sum = 0;
 				for(Student student : students) {
 					if(student != null) {
@@ -78,7 +78,7 @@ public class ScoreManagement {
 					}
 				}
 				System.out.println("평균: " + (double)sum/count);
-			} else if( choice.equals("7") ) {
+			} else if( choice.equals("7") ) {						//7. 종료
 				break;
 			} 
 		}

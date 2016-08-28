@@ -9,20 +9,20 @@ public class ScoreManagement {
 		while(true) {
 			System.out.println("------------------------------------------------------------------------");
 			if(students == null) {
-				System.out.println("1.ÃÑÇĞ»ı¼ö | 7.Á¾·á");
+				System.out.println("1. ì´ í•™ìƒ ìˆ˜ | 7. ì¢…ë£Œ");
 			} else {
-				System.out.println("1.ÃÑÇĞ»ı¼ö | 2.¸ñ·Ï | 3.ÀÔ·Â | 4.»èÁ¦ | 5.ÃÖ°íÁ¡¼ö | 6.Æò±Õ | 7.Á¾·á");
+				System.out.println("1. ì´ í•™ìƒ ìˆ˜ | 2. ëª©ë¡ | 3. ì…ë ¥ | 4. ì‚­ì œ | 5. ìµœê³  ì ìˆ˜ | 6. í‰ê·  | 7. ì¢…ë£Œ");
 			}
 			System.out.println("------------------------------------------------------------------------");
-			System.out.print("¼±ÅÃ: ");
+			System.out.print("ì„ íƒ: ");
 			String choice = scanner.nextLine();
 			if( choice.equals("1") ) {
-				System.out.print("ÃÑÇĞ»ı¼ö: ");
+				System.out.print("ì´ í•™ìƒ ìˆ˜: ");
 				int totalNum = Integer.parseInt(scanner.nextLine());
 				students = new String[totalNum][];
 			} else if( choice.equals("2") ) {
 				System.out.println("*********************************************");
-				System.out.println("ÇĞ¹ø\t\tÀÌ¸§\t\tÁ¡¼ö");
+				System.out.println("í•™ë²ˆ\t\tì´ë¦„\t\tì ìˆ˜");
 				System.out.println("*********************************************");
 				for(int i=0; i<students.length; i++) {
 					String[] student = students[i];
@@ -31,9 +31,9 @@ public class ScoreManagement {
 					}
 				}
 			} else if( choice.equals("3") ) {
-				System.out.print("ÀÌ¸§: ");
+				System.out.print("ì´ë¦„ : ");
 				String name = scanner.nextLine();
-				System.out.print("Á¡¼ö: ");
+				System.out.print("ì ìˆ˜: ");
 				String score = scanner.nextLine();
 				for(int i=0; i<students.length; i++) {
 					if(students[i] == null) {
@@ -43,7 +43,7 @@ public class ScoreManagement {
 					}
 				}
 			} else if( choice.equals("4") ) {
-				System.out.print("»èÁ¦ÇÒ ÇĞ¹ø: ");
+				System.out.print("ì‚­ì œí•  í•™ìƒì˜ í•™ë²ˆ: ");
 				int sno = Integer.parseInt(scanner.nextLine());
 				students[sno] = null;
 			} else if( choice.equals("5") ) {
@@ -58,7 +58,7 @@ public class ScoreManagement {
 				}
 				
 				System.out.println("*********************************************");
-				System.out.println("ÇĞ¹ø\t\tÀÌ¸§\t\tÁ¡¼ö");
+				System.out.println("í•™ë²ˆ\t\tì´ë¦„\t\tì ìˆ˜");
 				System.out.println("*********************************************");
 				
 				for(String[] student : students) {
@@ -78,7 +78,7 @@ public class ScoreManagement {
 						sum += Integer.parseInt(student[2]);
 					}
 				}
-				System.out.println("ÆòÁ¡: " + (double)sum/count);
+				System.out.println("í‰ê· : " + (double)sum/count);
 			} else if( choice.equals("7") ) {
 				break;
 			} 
