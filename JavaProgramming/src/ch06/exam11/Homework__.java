@@ -7,8 +7,7 @@ public class Homework__ {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 //		String[][] article = new String[100][];
-		Art[] article = new Art[100];
-		
+		Board[] board = new Board[100];		
 	
 		while ( true ) {
 			System.out.println("-------------------------------------------------------------------------------");
@@ -24,18 +23,18 @@ public class Homework__ {
 				// 를 표시하는 목록이 나타난다.
 				
 				// 입력된 글이 있는지 확인. 있으면 true 없으면 false
-				boolean articleIs = false;
+				boolean boardIs = false;
 				
 				// 목록에 글이 없으면 contentIs가 false가 되고 있으면 true가 된다.
 //				for ( String[] noArticle : article ) {
-				for ( Art noArticle : article ) {					
+				for ( Board noArticle : board ) {					
 					if ( noArticle != null ) {			
-						articleIs = true;
+						boardIs = true;
 					}
 				}
 				
 				// 입력된 글이 없을 때 다음을 실행하지 않고, continue를 실행해서 while의 처음으로 돌아간다.
-				if( articleIs == false ) {
+				if( boardIs == false ) {
 					System.out.println("저장되어있는 글이 없습니다. ");
 					continue;
 				}
@@ -46,9 +45,9 @@ public class Homework__ {
 				System.out.println("***************************************");
 				
 //				for ( String[] art : article ) {
-				for ( Art art : article ) {	
-					if ( art != null )
-						System.out.println(art.no + "\t" + art.title + "\t" + art.writer + "\t   " + art.count + "\t   " + art.content);
+				for ( Board bo : board ) {	
+					if ( bo != null )
+						System.out.println(bo.getNo() + "\t" + bo.getTitle() + "\t" + bo.getWriter() + "\t   " + bo.getCount());
 				}
 				
 				System.out.println("***************************************");
@@ -65,10 +64,10 @@ public class Homework__ {
 				String writer = scanner.nextLine();
 				
 				// 비어있는 배열을 찾아서 번호, 제목, 글쓴이, 조회수(0), 내용을 입력한다.
-				for ( int i = 0 ; i < article.length ; i++ ) {
-					if( article[i] == null ) {
+				for ( int i = 0 ; i < board.length ; i++ ) {
+					if( board[i] == null ) {
 //						String[] art = { String.valueOf(i), title, writer, "0", content };
-						article[i] = new Art(i, title, writer, 0, content);
+						board[i] = new Board(i, title, writer, 0, content);
 						break;
 					}
 				}
@@ -77,17 +76,17 @@ public class Homework__ {
 				// 3. 상세보기 를 선택했을 때 실행되는 부분
 				
 				// 입력된 글이 있는지 확인. 있으면 true 없으면 false
-				boolean articleIs = false;
+				boolean boardIs = false;
 				
 				// 목록에 글이 없으면 contentIs가 false가 되고 있으면 true가 된다.
-				for ( Art noArticle : article ) {
+				for ( Board noArticle : board ) {
 					if ( noArticle != null ) {
-						articleIs = true;
+						boardIs = true;
 					}
 				}
 				
 				// 입력된 글이 없을 때 다음을 실행하지 않고, continue를 실행해서 while의 처음으로 돌아간다.
-				if( articleIs == false ) {
+				if( boardIs == false ) {
 					System.out.println("저장되어있는 글이 없습니다. ");
 					continue;
 				}
@@ -98,9 +97,9 @@ public class Homework__ {
 				System.out.println("번호\t제목\t글쓴이\t조회수");
 				System.out.println("***************************************");
 				
-				for ( Art art : article ) {
-					if ( art != null )
-						System.out.println(art.no + "\t" + art.title + "\t" + art.writer + "\t   " + art.count);
+				for ( Board bo : board ) {
+					if ( bo != null )
+						System.out.println(bo.getNo() + "\t" + bo.getTitle() + "\t" + bo.getWriter() + "\t   " + bo.getCount());
 				}
 				
 				System.out.println("***************************************");
@@ -132,20 +131,21 @@ public class Homework__ {
 					
 					// 입력한 번호에 해당하는 글이 없으면 에러 메세지 출력
 					// 있으면 번호, 제목, 글쓴이, 조회수, 내용 출력. 후 조회수 1 증가.
-					if ( article[num] == null ) {
+					if ( board[num] == null ) {
 						System.out.println("입력하신 번호에 해당하는 글이 없습니다. " );
 					} else {
 						// 조회수 1 증가
 						//article[num][3] = String.valueOf( 1 + Integer.parseInt(article[num][3]) );
-						article[num].count = article[num].count + 1 ; 
+						//board[num].count = board[num].count + 1 ;
+						board[num].setCount(board[num].getCount()+1);						
 						
 						// 번호, 제목, 글쓴이, 조회수, 내용 출력
-						System.out.println("번호 : " + article[num].no);
-						System.out.println("제목 : " + article[num].title);
-						System.out.println("글쓴이 : " + article[num].writer);
-						System.out.println("조회수 : " + article[num].count);
+						System.out.println("번호 : " + board[num].getNo());
+						System.out.println("제목 : " + board[num].getTitle());
+						System.out.println("글쓴이 : " + board[num].getWriter());
+						System.out.println("조회수 : " + board[num].getCount());
 						System.out.println("내용 : ");
-						System.out.println(article[num].content + "\n");
+						System.out.println(board[num].getContent() + "\n");
 					}
 					
 					break;
@@ -155,17 +155,17 @@ public class Homework__ {
 				// 4. 수정 을 선택했을 때 실행되는 부분.
 				
 				// 입력된 글이 있는지 확인. 있으면 true 없으면 false
-				boolean articleIs = false;
+				boolean boardIs = false;
 				
 				// 목록에 글이 없으면 contentIs가 false가 되고 있으면 true가 된다.
-				for ( Art noArticle : article ) {
+				for ( Board noArticle : board ) {
 					if ( noArticle != null ) {
-						articleIs = true;
+						boardIs = true;
 					}
 				}
 				
 				// 입력된 글이 없을 때 다음을 실행하지 않고, continue를 실행해서 while의 처음으로 돌아간다.
-				if( articleIs == false ) {
+				if( boardIs == false ) {
 					System.out.println("저장되어있는 글이 없습니다. ");
 					continue;
 				}
@@ -176,9 +176,9 @@ public class Homework__ {
 				System.out.println("번호\t제목\t글쓴이\t조회수");
 				System.out.println("***************************************");
 				
-				for ( Art art : article ) {
-					if ( art != null )
-						System.out.println(art.no + "\t" + art.title + "\t" + art.writer + "\t   " + art.count);
+				for ( Board bo : board ) {
+					if ( bo != null )
+						System.out.println(bo.getNo() + "\t" + bo.getTitle() + "\t" + bo.getWriter() + "\t   " + bo.getCount());
 				}
 				
 				System.out.println("***************************************");
@@ -209,7 +209,7 @@ public class Homework__ {
 					int num = Integer.parseInt(intException);
 					
 					// 입력된 번호에 일치하는 글이 없는 경우(if), 와 일치하는 글이 있는 경우(else)
-					if ( article[num] == null ) {
+					if ( board[num] == null ) {
 						System.out.println("입력하신 번호의 글이 없습니다.");
 					} else {
 						while ( true ) {
@@ -219,15 +219,19 @@ public class Homework__ {
 							if ( modNum == 3 ) {
 								break;
 							} else if ( modNum == 1 ) {
-								System.out.println("현재 제목은 \"" + article[num].title + "\"입니다.");
+								System.out.println("현재 제목은 \"" + board[num].getTitle() + "\"입니다.");
 								System.out.print("수정할 제목을 입력 하세요 : ");
-								article[num].title = scanner.nextLine();
+//								board[num].title = scanner.nextLine();
+								board[num].setTitle(scanner.nextLine());
+								
 								System.out.println("수정되었습니다. ");
 								break;
 							} else if ( modNum == 2 ) {
-								System.out.println("현재 내용은 \"" + article[num].content + "\"입니다.");
+								System.out.println("현재 내용은 \"" + board[num].getContent() + "\"입니다.");
 								System.out.print("수정할 내용을 입력 하세요 : ");
-								article[num].content = scanner.nextLine();
+//								board[num].content = scanner.nextLine();
+								board[num].setContent(scanner.nextLine());
+								
 								System.out.println("수정되었습니다. ");
 								break;
 							} else {
@@ -244,17 +248,17 @@ public class Homework__ {
 				// 5. 삭제 를 선택했을 때 실행되는 부분
 				
 				// 입력된 글이 있는지 확인. 있으면 true 없으면 false
-				boolean articleIs = false;
+				boolean boardIs = false;
 				
 				// 목록에 글이 없으면 contentIs가 false가 되고 있으면 true가 된다.
-				for ( Art noArticle : article ) {
+				for ( Board noArticle : board ) {
 					if ( noArticle != null ) {
-						articleIs = true;
+						boardIs = true;
 					}
 				}
 				
 				// 입력된 글이 없을 때 다음을 실행하지 않고, continue를 실행해서 while의 처음으로 돌아간다.
-				if( articleIs == false ) {
+				if( boardIs == false ) {
 					System.out.println("저장되어있는 글이 없습니다. ");
 					continue;
 				}
@@ -265,9 +269,9 @@ public class Homework__ {
 				System.out.println("번호\t제목\t글쓴이\t조회수");
 				System.out.println("***************************************");
 				
-				for ( Art art : article ) {
-					if ( art != null )
-						System.out.println(art.no + "\t" + art.title + "\t" + art.writer + "\t   " + art.count);
+				for ( Board bo : board ) {
+					if ( bo != null )
+						System.out.println(bo.getNo() + "\t" + bo.getTitle() + "\t" + bo.getWriter() + "\t   " + bo.getCount());
 				}
 				
 				System.out.println("***************************************");
@@ -298,10 +302,10 @@ public class Homework__ {
 					int num = Integer.parseInt(intException);
 					
 					// 입력된 번호에 일치하는 글이 없는 경우(if), 와 일치하는 글이 있는 경우(else)
-					if ( article[num] == null ) {
+					if ( board[num] == null ) {
 						System.out.println("입력하신 번호의 글이 없습니다.");
 					} else {
-						article[num] = null;
+						board[num] = null;
 						System.out.println("삭제 되었습니다 ");
 					}
 					
