@@ -66,8 +66,16 @@ public class Homework__ {
 				// 비어있는 배열을 찾아서 번호, 제목, 글쓴이, 조회수(0), 내용을 입력한다.
 				for ( int i = 0 ; i < board.length ; i++ ) {
 					if( board[i] == null ) {
-//						String[] art = { String.valueOf(i), title, writer, "0", content };
+						//String[] art = { String.valueOf(i), title, writer, "0", content };
+						
+//						board[i].setNo(i);
+//						board[i].setTitle(title);
+//						board[i].setWriter(writer);
+//						board[i].setCount(0);
+//						board[i].setContent(content);				
+						
 						board[i] = new Board(i, title, writer, 0, content);
+						
 						break;
 					}
 				}

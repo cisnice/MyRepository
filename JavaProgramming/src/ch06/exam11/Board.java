@@ -10,7 +10,7 @@ public class Board {
 	private String content;
 		
 	//Constructor
-	Board(){};
+//	Board(){};
 	Board(int no, String title, String writer, int count, String content){
 		this.no = no;
 		this.title = title;
