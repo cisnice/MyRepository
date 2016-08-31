@@ -23,13 +23,13 @@ public class Example {
 		Television tv = new Television();
 		tv.turnOn();		//tv 객체에 직접 접근		
 		
-		RemoteControl rc = tv;
+		RemoteControl rc = tv;			// RemoteControl rc = new Television();
 		rc.turnOn();		// 인터페이스로 tv 객체에 접근
 		
 		Audio audio = new Audio();
 		audio.turnOn();
 		
-		rc = audio;
+		rc = audio;							// RemoteControl rc = new Audio();
 		rc.turnOn();
 		
 		//-----------------------------------------------------

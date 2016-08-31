@@ -3,7 +3,7 @@ package ch08.exam01;
 public interface RemoteControl {
 
 	//Constant
-	int MAX_VOLUME = 10;		//public static final 생략. 상수명은 대문자. 단어와 단어 사이는 (_) 로 연결. 초기화 안하면 에러 
+	int MAX_VOLUME = 10;		//public static final 생략. 상수명은 대문자. 단어와 단어 사이는 (_) 로 연결. 초기화 필수
 	int MIN_VOLUME = 0;
 	
 	
