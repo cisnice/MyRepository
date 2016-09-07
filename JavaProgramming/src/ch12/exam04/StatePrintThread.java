@@ -9,7 +9,7 @@ public class StatePrintThread extends Thread {
 
 	public void run() {
 		while(true) {
-			Thread.State state = targetThread.getState();
+			Thread.State state = targetThread.getState();		//Thread.State 열거타입
 			System.out.println("타겟 스레드 상태: " + state);
 			if(state == Thread.State.NEW) {
 				targetThread.start();
