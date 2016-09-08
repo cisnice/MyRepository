@@ -19,7 +19,7 @@ public class SoundThread extends Thread {
 		
 		for ( int i = 0; i < 5; i++) {
 			toolkit.beep();
-			System.out.println("소리: " + Thread.currentThread().getName());		// 스레드 명 출력
+			System.out.println("소리 : " + Thread.currentThread().getName());		// 스레드 명 출력
 			try { Thread.sleep(500); } catch(Exception e) {}
 		}
 	}

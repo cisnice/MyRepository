@@ -6,6 +6,7 @@ public class TargetThread extends Thread {
 		
 		try {
 			//1.5초간 일시 정지
+			System.out.println("111");
 			Thread.sleep(1500);
 		} catch(Exception e) {}
 		

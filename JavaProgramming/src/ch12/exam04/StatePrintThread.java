@@ -10,8 +10,8 @@ public class StatePrintThread extends Thread {
 	public void run() {
 		while(true) {
 			Thread.State state = targetThread.getState();		//Thread.State 열거타입
-			System.out.println("타겟 스레드 상태: " + state);
-			if(state == Thread.State.NEW) {
+			System.out.println("타겟 스레드 상태: " + state);		
+			if(state == Thread.State.NEW) {							//NEW - 스레드 객체생성. start() 메소드가 호출되지 않은 상태
 				targetThread.start();
 			}
 			if(state == Thread.State.TERMINATED) {
