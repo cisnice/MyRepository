@@ -10,7 +10,7 @@ public class OutputStreamExample {
 		OutputStream os = new FileOutputStream("src/ch18/exam02/data1.txt");
 		
 		String data = "abcdefghij";
-		byte[] values = data.getBytes();
+		byte[] values = data.getBytes();			// 문자열을 바이트 배열로 리턴
 		
 		for(int i = 0; i<values.length; i++) {
 			os.write(values[i]);			

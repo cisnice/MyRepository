@@ -16,7 +16,7 @@ public class InputStreamExample {
 		
 		while(true) {
 			int value = is.read();
-			if ( value == -1) break;
+			if ( value == -1 ) break;
 			System.out.println(value);
 			count++;
 		}
