@@ -1,39 +1,19 @@
 package com.mycompany.myapp;
 
-import java.text.DateFormat;
-import java.util.Date;
-import java.util.Locale;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
-/**
- * Handles requests for the application home page.
- */
 @Controller
 public class HomeController {
-	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
-	
-	/**
-	 * Simply selects the home view to render by returning its name.
-	 */
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
-		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
-		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("serverTime", formattedDate );
-		
-		return "home";
+
+	@RequestMapping("/")							// URL 주소 지정 시 구분자 사용
+	public String home() {								// 메소드 명은 어떤 것을 써도 상관없다.
+		System.out.println("home() 실행1");		// 테스트 용도로 작성하지만 나중에 개발 끝난 후에 다 지워야 하기 때문에 쓰지 않는다.
+		logger.info("home() 실행2");					// Log 레벨을 지정해서 출력이 될지 안될지 정한다. trace, debug, info, warn, error, off
+		return "index";  									// *.jsp 파일명과 같아야 한다.	
 	}
 	
 }
