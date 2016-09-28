@@ -8,19 +8,19 @@
  	<!-- 서블릿 등록 -->
  	<servlet>
   		<servlet-name>now</servlet-name>	
-  		<servlet-class>servlet.NowServlet</servlet-class>	<!-- NowServlet 식별자. now를 NowServlet 으로 지정한다. 패키지명.실행할클래스명 -->  		
+  		<servlet-class>servlet.NowServlet</servlet-class>		<!-- NowServlet 식별자. now를 NowServlet 으로 지정한다. 패키지명.실행할클래스명 -->  		
 		<init-param>
 			<param-name>location</param-name>
 			<param-value>서울</param-value>					<!-- servlet-context.xml 을 NowServlet에서 값을 얻어온다. 개발자에 따라서 프로젝트의 내용에 따라서 값이 바뀐다. -->
 		</init-param>
-  		<load-on-startup>1</load-on-startup>				<!-- 톰캣이 시작될때 객체 생성. 웹어플리케이션이 was에 배치될때 객체 생성. 숫자로 우선순위를 정한다. -->
+  		<load-on-startup>1</load-on-startup>					<!-- 톰캣이 시작될때 객체 생성. 웹어플리케이션이 was에 배치될때 객체 생성. 숫자로 우선순위를 정한다. -->
  	</servlet>																<!-- 클라이언트가 요청하기 전에 객체 생성 -->
   
  	<!-- 서블릿 URL 매핑 -->
   	<servlet-mapping>													<!-- Context 와 클라이언트 매핑 -->
  		<servlet-name>now</servlet-name>
  		<url-pattern>/</url-pattern>								<!-- GET /ServletJspProgramming/now  HTTP/1.1 NowServlet의 doGet()메소드가 실행된다. -->
-  	</servlet-mapping>												<!-- 요청방식이 GET. NowServlet의 doGet()메소드가 실행된다. -->
+  	</servlet-mapping>													<!-- 요청방식이 GET. NowServlet의 doGet()메소드가 실행된다. -->
   		
 </web-app>																<!-- web.xml이 수정되면 재배치를 위해서 서버 재부팅한다. -->
 																				<!-- 서버 시작하고 웹에서 http://localhost:8080/ServletJspProgramming/now 하면 console 에 doGet()실행 뜬다 -->
