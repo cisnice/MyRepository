@@ -10,7 +10,7 @@ public class HomeController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping("/")
 	public String home() {
 		System.out.println("println()");
 		logger.info("logger.info 출력");		
