@@ -6,29 +6,30 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
+@RequestMapping("/member")
 public class MemberController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(MemberController.class);
 
-	@RequestMapping("/member/join")
+	@RequestMapping("join")
 	public String join() {		
 		logger.info("join");		
 		return "member/join";
 	}
 	
-	@RequestMapping("/member/login")
+	@RequestMapping("login")
 	public String login() {		
 		logger.info("login");		
 		return "member/login";
 	}
 	
-	@RequestMapping("/member/logout")
+	@RequestMapping("logout")
 	public String logout() {		
 		logger.info("logout");		
 		return "member/logout";
 	}
 	
-	@RequestMapping("/member/withdraw")
+	@RequestMapping("withdraw")
 	public String withdraw() {		
 		logger.info("withdraw");		
 		return "member/withdraw";
