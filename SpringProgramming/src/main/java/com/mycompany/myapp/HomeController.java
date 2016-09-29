@@ -16,10 +16,4 @@ public class HomeController {
 		return "home";  									// *.jsp 파일명과 같아야 한다.	
 	}
 	
-	@RequestMapping("/news")						// http://localhost:8080/myapp/news	
-	public String news() {
-		logger.info("news() 실행");
-		return "news";
-	}
-	
 }
