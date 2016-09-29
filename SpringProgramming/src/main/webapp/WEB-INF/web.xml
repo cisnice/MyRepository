@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>			<!-- *.xml 은 <?xml ~~ ?> 을 정의 한다. root element(제일 바깥쪽 테그)는 반드시 하나만 작성한다. -->
-<web-app 
+<?xml version="1.0" encoding="UTF-8"?>			<!-- *.xml 은 <?xml ~~ ?> 을 정의 한다. -->		<!-- root element(제일 바깥쪽 테그 (web-app) )는 반드시 하나만 작성한다. --> 
+<web-app 													
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xmlns="http://xmlns.jcp.org/xml/ns/javaee" 							
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
