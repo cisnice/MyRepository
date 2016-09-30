@@ -6,6 +6,20 @@
 								 http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" 	
 	version="3.1">		<!-- web-app에 접두사가 없으므로 내부에서 xmlns(디폴트 네임스페이스)를 찾아서 web-app_3_1.xsd 스키마에서 사용할 수 있는 테그인지 검사 -->
   
+  	<filter>
+  		<filter-name>encodingFilter</filter-name>
+  		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+  		<init-param>
+  			<param-name>encoding</param-name>
+  			<param-value>UTF-8</param-value>
+  		</init-param>
+  	</filter>
+  	
+  	<filter-mapping>
+  		<filter-name>encodingFilter</filter-name>
+  		<url-pattern>/*</url-pattern>
+  	</filter-mapping>
+  	
 	<!-- Processes application requests -->
 	<servlet>				<!-- web-app_3_1.xsd 에서 servlet을 사용할 수 있는지 검사한다. -->
 		<servlet-name>appServlet</servlet-name>

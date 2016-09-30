@@ -37,7 +37,7 @@ public class Exam02Controller {
 	
 	@RequestMapping("/login")
 	public String login(
-			@RequestParam("id") String mid,			 	//index.jsp 에서 넘어온 파라미터와 받는 매개변수가 다르다면 @RequestParam 을 넣어준다.
+			@RequestParam("id") String mid,			 					//index.jsp 에서 넘어온 파라미터와 받는 매개변수가 다르다면 @RequestParam 을 넣어준다.
 			@RequestParam("password") String mpassword) {		// @RequestParam(value = "password") => value 생략
 		logger.info("login 요청 처리");
 		logger.info("mid : " + mid);
