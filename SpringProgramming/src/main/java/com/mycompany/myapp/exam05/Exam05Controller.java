@@ -33,7 +33,7 @@ public class Exam05Controller {
 		return mav;		
 	}
 	
-	@RequestMapping("/exam05/index3")															//return 값이 없으면 제일 마지막 값인 index3 의 jsp 를 찾는다.
+	@RequestMapping("/exam05/index3")																									//return 값이 없으면 제일 마지막 값인 index3 의 jsp 를 찾는다.
 	public void index3(HttpServletRequest request , HttpServletResponse response) throws IOException {			//자체적으로 응답(response) 보낼 메시지가 있으면  jsp 를 찾지 않는다.
 		logger.info("index3 요청처리");
 		response.setContentType("image/jpeg");
