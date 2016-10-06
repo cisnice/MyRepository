@@ -18,5 +18,11 @@
 		
 		7-1) <a href="/myspring/exam06/method4CreateCookie">쿠키 생성</a> <br/>
 		7-2) <a href="/myspring/exam06/method4ReceiveCookie1">쿠키 받기1</a> <br/>
+		7-3) <a href="/myspring/exam06/method4ReceiveCookie2">쿠키 받기2</a> <br/>
+		7-4) <a href="/myspring/exam06/method4DeleteCookie">쿠키 삭제</a> <br/>
+		
+		8-1) <a href="/myspring/exam06/method5SetObject">세션에서 객체 저장</a> <br/>
+		8-2) <a href="/myspring/exam06/method5GetObject">세션에서 객체 얻기</a> <br/>
+		8-3) <a href="/myspring/exam06/method5RemoveObject">세션에서 객체 삭제</a> <br/>
 	</body>
 </html>

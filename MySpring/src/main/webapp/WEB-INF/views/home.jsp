@@ -15,5 +15,6 @@
 		4. <a href="/myspring/exam04/index">Exam04</a><br/>
 		5. <a href="/myspring/exam05/index">Exam05</a><br/>
 		6. <a href="/myspring/exam06/index">Exam06</a><br/>
+		7. <a href="/myspring/exam07/index">Exam07</a><br/>
 	</body>
 </html>
