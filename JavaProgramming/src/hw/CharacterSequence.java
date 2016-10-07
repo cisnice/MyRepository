@@ -34,14 +34,11 @@ public class CharacterSequence {
         14 */
         
         // write your code here        
+        
         int sum = 0;
-        try {
-        	for (String word : words) {
-        		sum += word.length();        		
-        	}
-        } catch (NumberFormatException e) {
-        	 e.printStackTrace();
-        }
+        for (String word : words) {
+    		sum += word.length();        		
+    	}
         System.out.println(sum);
 	}
 }
