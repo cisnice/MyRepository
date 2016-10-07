@@ -52,6 +52,18 @@ public class Exam09Controller {
 		this.c = c;
 	}
 	
+	private E e;
+	public void setE(E e){
+		logger.info("setE() 실행");
+		this.e = e;
+	}
+	
+	private F f;
+	public void setF(F f){
+		logger.info("setF() 실행");
+		this.f = f;
+	}
+	
 	public Exam09Controller() {							//Spring에서 생성자는 기본 생성자만 허용. 매개변수 받을 수 없다.
 		logger.info("Exam09Controller 객체 생성");
 	}
@@ -78,6 +90,8 @@ public class Exam09Controller {
 	public String method2() {
 		logger.info("method2() 처리");
 		c.method();
+		e.method();
+		f.method();
 		return "redirect:/exam09/index";
 	}
 }

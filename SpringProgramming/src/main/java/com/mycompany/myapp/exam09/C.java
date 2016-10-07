@@ -8,7 +8,7 @@ public class C {
 	
 	private D d; 
 	
-	public C(D d) {
+	public C(D d) {						// 생성자 주입
 		logger.info("C객체 생성");
 		this.d = d;
 	}

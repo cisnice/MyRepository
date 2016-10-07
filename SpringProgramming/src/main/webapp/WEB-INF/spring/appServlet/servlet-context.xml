@@ -41,12 +41,25 @@
 	<beans:bean name="serviceCImpl3" class="com.mycompany.myapp.exam09.ServiceCImpl3" />
 	
 	<!-- C를 관리 객체로 생성  -->
-	<beans:bean name="c" class="com.mycompany.myapp.exam09.C" >
-		<beans:constructor-arg ref="d" />					<!-- 객체참조  ref. D->C 생성자 주입 -->
+	<beans:bean name="c" class="com.mycompany.myapp.exam09.C" >	<!-- C클래스에 기본 생성자가 없다. -->
+		<beans:constructor-arg ref="d" />											<!-- 객체참조  ref. D->C 생성자 주입 -->
 	</beans:bean>
 	
 	<!-- D를 관리 객체로 생성  -->
 	<beans:bean name="d" class="com.mycompany.myapp.exam09.D" />
+	
+	<!-- E를 관리 객체로 생성  -->
+	<beans:bean name="e" class="com.mycompany.myapp.exam09.E">
+		<beans:constructor-arg ref="bObj" />
+		<beans:constructor-arg ref="d" />
+	</beans:bean>
+	
+	<!-- F를 관리 객체로 생성  -->
+	<beans:bean name="f" class="com.mycompany.myapp.exam09.F">
+		<beans:constructor-arg ref="serviceAObj" />
+		<beans:constructor-arg ref="serviceBObj" />
+		<beans:constructor-arg ref="serviceCImpl1" />
+	</beans:bean>
 	
 	<!-- Exam09Controller 객체를 찾아서 가져오기 --> 											<!-- 스프링은 기본적으로 싱글톤을 지향한다. 하나의 객체만 생성가능 -->
 	<beans:bean name="exam09Controller" class="com.mycompany.myapp.exam09.Exam09Controller">
@@ -60,6 +73,8 @@
 		<!-- <beans:property name="serviceD" ref="serviceCImpl2" /> -->
 		<beans:property name="serviceD" ref="serviceCImpl3" />	
 		<beans:property name="c" ref="c" />		
+		<beans:property name="e" ref="e" />
+		<beans:property name="f" ref="f" />
 	</beans:bean>
 </beans:beans>
 
