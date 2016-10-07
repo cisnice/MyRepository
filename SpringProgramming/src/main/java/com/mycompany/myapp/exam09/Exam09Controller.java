@@ -46,7 +46,13 @@ public class Exam09Controller {
 		this.serviceD = serviceD;
 	}
 
-	public Exam09Controller() {
+	private C c;
+	public void setC(C c){
+		logger.info("setC() 실행");
+		this.c = c;
+	}
+	
+	public Exam09Controller() {							//Spring에서 생성자는 기본 생성자만 허용. 매개변수 받을 수 없다.
 		logger.info("Exam09Controller 객체 생성");
 	}
 	
@@ -65,6 +71,13 @@ public class Exam09Controller {
 		serviceB.method();
 		serviceC.method();
 		serviceD.method();
+		return "redirect:/exam09/index";
+	}
+	
+	@RequestMapping("/method2")
+	public String method2() {
+		logger.info("method2() 처리");
+		c.method();
 		return "redirect:/exam09/index";
 	}
 }
