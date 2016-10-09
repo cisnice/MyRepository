@@ -21,6 +21,12 @@ public class Exam09Controller {
 		logger.info("setInterA() 실행");		
 		this.interA=interA;
 	}
+	
+	private B b;
+	public void setB(B b) {
+		logger.info("setB() 실행");
+		this.b = b;
+	}
 
 	@RequestMapping("/index")
 	public String index() {		
@@ -32,6 +38,13 @@ public class Exam09Controller {
 		logger.info("method1() 처리");
 		a.method();	
 		interA.method();
+		return "redirect:/exam09/index";
+	}
+	
+	@RequestMapping("/method2")
+	public String method2() {
+		logger.info("method2() 처리");
+		b.method();		
 		return "redirect:/exam09/index";
 	}
 }

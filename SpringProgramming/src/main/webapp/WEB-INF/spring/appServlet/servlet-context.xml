@@ -74,7 +74,7 @@
 		<beans:property name="serviceD" ref="serviceCImpl3" />	
 		<beans:property name="c" ref="c" />		
 		<beans:property name="e" ref="e" />
-		<beans:property name="f" ref="f" />
+		<beans:property name="f" ref="f" />	
 	</beans:bean>
 </beans:beans>
 
