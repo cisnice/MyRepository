@@ -3,7 +3,6 @@ package practice;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 
 public class Coordinate2 {
 
@@ -16,39 +15,31 @@ public class Coordinate2 {
 		} catch (IOException e) {
 			e.printStackTrace();			
 		}
-		
-		ArrayList<String> list = new ArrayList<>();
-		
-		for (String word : words) {
-			list.add(word);
-		}
-				
-		int idx=0;
-		String str;		
-		int[] idxNum = new int[10];
+
 		int moCnt = 0;
-		String[] strArr = {"a", "e", "i", "o", "u"};
-		
-		for (int i=0; i<list.size(); i++) {
-			
-			for (int j=0; j<strArr.length; j++) {
-//				System.out.println(list.get(i));
-				if ( list.get(i).contains(strArr[j]) ) { 
-					idxNum[j] = list.get(i).indexOf(strArr[j]);
-					
-//					if ( idxNum[j] != -1 ) {
-						
-					str = list.get(i).substring(idxNum[i], idxNum[i]+2);						
-					System.out.println(str);					
-					
-					if ( str.contains(strArr[i]) ) {
-//					Coordinate4.java		System.out.println(list.get(i));
-						moCnt++;							
+		int jaCnt = 0;
+		for (String word : words) {			
+			for (int i=0; i<word.length(); i++) {				
+				if ( word.charAt(i)=='a' || word.charAt(i)=='e' || word.charAt(i)=='i' || word.charAt(i)=='o' || word.charAt(i)=='u' ) {
+					if ( i != word.length()-1 ) {
+						if ( word.charAt(i+1)=='a' || word.charAt(i+1)=='e' || word.charAt(i+1)=='i' || word.charAt(i+1)=='o' || word.charAt(i+1)=='u' ) {
+							moCnt++;
+						}
 					}
-//					}
+				} else if ( word.charAt(i)!='a' && word.charAt(i)!='e' && word.charAt(i)!='i' && word.charAt(i)!='o' && word.charAt(i)!='u' ) {
+					if ( i != word.length()-1 ) {
+						if ( word.charAt(i+1)!='a' && word.charAt(i+1)!='e' && word.charAt(i+1)!='i' && word.charAt(i+1)!='o' && word.charAt(i+1)!='u' ) {
+							if ( i+1 != word.length()-1 ) {
+								if ( word.charAt(i+2)!='a' && word.charAt(i+2)!='e' && word.charAt(i+2)!='i' && word.charAt(i+2)!='o' && word.charAt(i+2)!='u' ) {
+									jaCnt++;
+								}
+							}
+						}						
+					}
 				}
-			}			
+			}
 		}
-//		System.out.println(moCnt);
+		System.out.println(moCnt);
+		System.out.println(jaCnt);
 	}
 }
