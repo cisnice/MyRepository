@@ -64,7 +64,7 @@ public class Exam06Controller {
 	}
 	
 	@RequestMapping("/method2")			// HttpServletResponse 변수 선언
-	public void method2(HttpServletRequest request, HttpServletResponse response) throws IOException {		// 요청 HTTP 에 대한 모든 내용을 담고 있다. 시작행, 헤더행의 내용 전부 
+	public void method2(HttpServletRequest request, HttpServletResponse response) throws IOException {		 
 //		response.setContentType("application/json;charset=UTF-8");
 ////		OutputStream os = response.getOutputStream();
 //		PrintWriter pw = response.getWriter();
