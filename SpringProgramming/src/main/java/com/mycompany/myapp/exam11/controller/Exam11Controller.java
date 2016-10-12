@@ -1,16 +1,19 @@
 package com.mycompany.myapp.exam11.controller;
 
 import java.util.Arrays;
+import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.mycompany.myapp.exam11.dto.Board;
 import com.mycompany.myapp.exam11.dto.Member;
+import com.mycompany.myapp.exam11.service.Exam11BoardService;
 import com.mycompany.myapp.exam11.service.Exam11MemberService;
 
 //@Controller("MemberController")		// 컨트롤러 등록 이름 바꾸기
@@ -93,11 +96,17 @@ public class Exam11Controller {
 	@RequestMapping(value="/boardWrite", method=RequestMethod.POST)
 	public String boardWrite(Board board) {
 		logger.info("boardWrite 처리");		
-		boardService.insert(board);		
+		boardService.write(board);		
 		return  "redirect:/exam11/index";
 	}
 	
-	
+	@RequestMapping("/boardList")
+	public String boardList(Model model) {
+		logger.info("boardList 처리");	
+		List<Board> list = boardService.getList();
+		model.addAttribute("boardList", list);
+		return  "exam11/boardList";
+	}	
 	
 	
 }
