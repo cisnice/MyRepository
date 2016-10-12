@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class Coordinate4 {
 
@@ -20,11 +19,28 @@ public class Coordinate4 {
 		} catch (IOException e) {
 			e.printStackTrace();			
 		}
+
+//		for (Integer number : numberList) {
+//		
+//		}
 		
-		for (Integer number : numberList) {
-			System.out.println("number = " + number);
-		}
+		String[] strArr = new String[10];
+		String[][] intArr = new String[10][2];
 		
-		
+		for (int i = 0; i < numberList.size(); i++) {
+			strArr[i] = String.valueOf(numberList.get(i));
+			
+			for (int j = 0; j < strArr[i].length(); j++) {
+				if ( j == strArr.length-1 ) { 
+					intArr[i][j] = strArr[i].substring(j);				
+				} else {
+					intArr[i][j] = strArr[i].substring(j, j+1);
+				}
+//				System.out.println("intArr[" + i + "]" + "[" + j + "]" + ":" + intArr[i][j]);
+//				if ( intArr[i][j] > intArr[i+1][j] ) {
+//					
+//				}
+			}	
+		}		
 	}
 }

@@ -67,7 +67,7 @@
 		<!-- <beans:property name="setter 이름" ref="매개값으로 전달할 객체(관리객체이름)-위에서 생성한 b 객체" /> -->
 		<beans:property name="b" ref="bObj" />													<!-- name에 setter 메소드에서 set을 빼고 첫문자를 소문자로 -->
 		<beans:property name="a" ref="aObj" />	
-		<beans:property name="serviceA" ref="serviceAObj" />
+		<beans:property name="serviceA" ref="serviceAObj" />					<!-- 값을 넘길때는 value, 객체를 넘길때는 ref -->
 		<beans:property name="serviceB" ref="serviceBObj" />		
 		<beans:property name="serviceC" ref="serviceCImpl1" />
 		<!-- <beans:property name="serviceD" ref="serviceCImpl2" /> -->

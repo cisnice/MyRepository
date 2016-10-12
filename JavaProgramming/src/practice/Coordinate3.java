@@ -43,12 +43,21 @@ public class Coordinate3 {
 					bool = false;
 				}
 			} else if ( str.length()==2 ) {
-				intArr2[1] = intArr1[0];
-				intArr2[0] = intArr1[1];			
-				num1 = Integer.parseInt(intArr1[0]) * 10 + Integer.parseInt(intArr1[1]);
-				num2 = Integer.parseInt(intArr2[0]) * 10 + Integer.parseInt(intArr2[1]);
-				cnt++;
-			}			
+				if (Integer.parseInt(intArr1[0]) != Integer.parseInt(intArr1[1])) {
+					intArr2[1] = intArr1[0];
+					intArr2[0] = intArr1[1];			
+					num1 = Integer.parseInt(intArr1[0]) * 10 + Integer.parseInt(intArr1[1]);
+					num2 = Integer.parseInt(intArr2[0]) * 10 + Integer.parseInt(intArr2[1]);
+					cnt++;
+				} else {
+					System.out.println(number);	
+					bool = false;
+				}
+			} else if ( str.length()==1 ) {
+				intArr2[0] = intArr1[0];			
+				num1 = Integer.parseInt(intArr1[0]);
+				num2 = Integer.parseInt(intArr2[0]);
+			}
 			number = num1 + num2;
 			
 			if (cnt==3){
