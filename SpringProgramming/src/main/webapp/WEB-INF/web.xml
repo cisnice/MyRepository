@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>			<!-- *.xml 은 <?xml ~~ ?> 을 정의 한다. -->		<!-- root element(제일 바깥쪽 테그 (web-app) )는 반드시 하나만 작성한다. --> 
+<web-app 													
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee" 							
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+								 http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" 	
+	version="3.1">		<!-- web-app에 접두사가 없으므로 내부에서 xmlns(디폴트 네임스페이스)를 찾아서 web-app_3_1.xsd 스키마에서 사용할 수 있는 테그인지 검사 -->
+  
+  	<filter>
+  		<filter-name>encodingFilter</filter-name>
+  		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+  		<init-param>
+  			<param-name>encoding</param-name>
+  			<param-value>UTF-8</param-value>
+  		</init-param>
+  	</filter>
+  	
+  	<filter-mapping>
+  		<filter-name>encodingFilter</filter-name>
+  		<url-pattern>/*</url-pattern>
+  	</filter-mapping>
+  	
+	<!-- Processes application requests -->
+	<servlet>				<!-- web-app_3_1.xsd 에서 servlet을 사용할 수 있는지 검사한다. -->
+		<servlet-name>appServlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>		<!-- 클라이언트에서 요청하면 가장 먼저 DispatcherServlet 을 실행한다. -->
+		<init-param>																										<!-- DispatcherServlet 이 servlet-context.xml 을 실행한다. -->
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/spring/appServlet/servlet-context.xml</param-value>		<!-- servlet-context.xml 스프링 설정파일 -->
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+		
+	<servlet-mapping>
+		<servlet-name>appServlet</servlet-name>
+		<url-pattern>/</url-pattern>						<!-- http://localhost:8080/myapp/ 이 생략됨. '/' 뒤에 무엇이 오든지 상관없이 실행된다. -->
+	</servlet-mapping>  
+  
+</web-app>
