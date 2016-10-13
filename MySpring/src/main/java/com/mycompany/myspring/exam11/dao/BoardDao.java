@@ -33,4 +33,21 @@ public class BoardDao {
 		return list;
 	}
 
+	public Board selectBoard(int bno) {
+		logger.info("selectBoard 실행");
+		Board board = new Board();
+		board.setBwriter("홍길동");
+		board.setBtitle("자바");
+		board.setBcontent("이것이 자바다.");
+		return board;
+	}
+
+	public void update(Board board) {
+		logger.info("update 실행");
+	}
+
+	public void delete(int bno) {
+		logger.info("delete 실행");
+	}
+
 }

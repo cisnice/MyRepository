@@ -26,5 +26,21 @@ public class BoardService {
 		logger.info("getList 실행");
 		List<Board> list = boardDao.selectList();
 		return list;
+	}
+
+	public Board getBoard(int bno) {
+		logger.info("getBoard 실행");
+		Board board = boardDao.selectBoard(bno);
+		return board;
+	}
+
+	public void updateBoard(Board board) {
+		logger.info("updateBoard 실행");
+		boardDao.update(board);
+	}
+
+	public void deleteBoard(int bno) {
+		logger.info("deleteBoard 실행");
+		boardDao.delete(bno);
 	}	
 }

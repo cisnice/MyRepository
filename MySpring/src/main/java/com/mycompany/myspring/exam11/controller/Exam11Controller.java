@@ -107,4 +107,33 @@ public class Exam11Controller {
 		return "exam11/boardList";
 	}
 	
+	@RequestMapping("/boardView" )
+	public String view(int bno, Model model) {
+		logger.info("view 출력");
+		Board board = boardService.getBoard(bno);
+		model.addAttribute("board", board);
+		return "exam11/boardView";
+	}
+	
+	@RequestMapping(value = "/boardUpdate", method=RequestMethod.GET )
+	public String boardUpdateForm(int bno, Model model) {
+		logger.info("boardUpdateForm(GET) 출력");
+		Board board = boardService.getBoard(bno);
+		model.addAttribute("board", board);		
+		return "exam11/boardUpdateForm";
+	}
+	
+	@RequestMapping(value = "/boardUpdate", method=RequestMethod.POST )
+	public String boardUpdate(Board board) {
+		logger.info("boardUpdate(POST) 출력");
+		boardService.updateBoard(board);
+		return "redirect:/exam11/boardList";
+	}
+	
+	@RequestMapping("/boardDelete" )
+	public String delete(int bno) {
+		logger.info("delete 출력");
+		boardService.deleteBoard(bno);		
+		return "redirect:/exam11/boardList";
+	}
 }
