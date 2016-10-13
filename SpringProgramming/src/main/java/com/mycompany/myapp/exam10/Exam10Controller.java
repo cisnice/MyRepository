@@ -28,8 +28,8 @@ public class Exam10Controller {
 	}
 	
 	private Service service;
-//	@Autowired											// Type으로 주입. 인터페이스를 구현한 관리객체가 1개 일 때 사용. 
-	@Resource(name="serviceImpl2")				// 등록 이름으로 주입. 인터페이스를 구현한 관리객체가 2개 이상일 때 사용. 첫자 소문자
+//	@Autowired											// Type으로 주입. 인터페이스를 구현한 관리객체가 1개 일 때 사용. setter, 필드 주입 가능 
+	@Resource(name="serviceImpl2")				// 등록 이름으로 주입. 인터페이스를 구현한 관리객체가 2개 이상일 때 사용. 첫자 소문자, setter 주입만 가능
 	public void setService(Service service) {		// Service 인터페이스를 구현한 관리객체(@Component)가 대입된다.  	
 		logger.info("setService() 실행");				
 		this.service = service;

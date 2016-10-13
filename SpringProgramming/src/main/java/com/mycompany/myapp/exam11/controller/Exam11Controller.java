@@ -17,6 +17,8 @@ import com.mycompany.myapp.exam11.service.Exam11BoardService;
 import com.mycompany.myapp.exam11.service.Exam11MemberService;
 
 //@Controller("MemberController")		// 컨트롤러 등록 이름 바꾸기
+//@Resource                                      // setter 주입만 가능. 등록 이름으로 주입
+//@Autowired										// sette, 필드 주입 가능. Type으로 주입
 @Controller
 @RequestMapping("/exam11")
 public class Exam11Controller {
@@ -107,6 +109,36 @@ public class Exam11Controller {
 		model.addAttribute("boardList", list);
 		return  "exam11/boardList";
 	}	
+	
+	@RequestMapping("/boardView")
+	public String boardView(int bno, Model model) {
+		logger.info("boardView 처리");
+		Board board = boardService.getBoard(bno);
+		model.addAttribute("board", board);		//boardView의 객체 이름과 같게 설정.
+		return "exam11/boardView";
+	}
+	
+	@RequestMapping(value="/boardUpdate", method=RequestMethod.GET)
+	public String boardUpdateForm(int bno, Model model) {
+		logger.info("boardUpdateForm(GET) 처리");
+		Board board = boardService.getBoard(bno);
+		model.addAttribute("board", board);		//boardView의 객체 이름과 같게 설정.
+		return "exam11/boardUpdateForm";
+	}	
+	
+	@RequestMapping(value="/boardUpdate", method=RequestMethod.POST)
+	public String boardUpdate(Board board) {      // boardUpdateForm 에서 bwriter=xxx&btitle=yyy&bcontent=zzz 를 board 객체로 받는다 
+		logger.info("boardUpdate(POST) 처리");
+		boardService.updateBoard(board);				
+		return "redirect:/exam11/boardList";
+	}	
+	
+	@RequestMapping("/boardDelete")
+	public String boardDelete(int bno) { 
+		logger.info("boardDelete 처리");
+		boardService.deleteBoard(bno);				
+		return "redirect:/exam11/boardList";
+	}
 	
 	
 }

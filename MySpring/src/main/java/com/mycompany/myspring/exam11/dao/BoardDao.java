@@ -23,7 +23,7 @@ public class BoardDao {
 	public List<Board> selectList() {
 		logger.info("selectList 실행");
 		List<Board> list = new ArrayList<>();
-		for (int i = 0; i < 10; i++) {
+		for (int i = 1; i < 10; i++) {
 			Board board = new Board();
 			board.setBtitle("제목" + i);
 			board.setBcontent("내용" + i);
