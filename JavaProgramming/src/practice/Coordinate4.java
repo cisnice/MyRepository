@@ -21,26 +21,47 @@ public class Coordinate4 {
 		}
 
 //		for (Integer number : numberList) {
-//		
+//			System.out.print(number + " ");
 //		}
 		
+//		System.out.println();
+		
+		
+		for (Integer number : numberList) {
+			System.out.print(number + " ");
+		}
+		System.out.println();
+		
+//		Collections.sort(numberList);
+		
 		String[] strArr = new String[10];
-		String[][] intArr = new String[10][2];
+		String[][] strArr2 = new String[10][2];		
 		
 		for (int i = 0; i < numberList.size(); i++) {
 			strArr[i] = String.valueOf(numberList.get(i));
 			
 			for (int j = 0; j < strArr[i].length(); j++) {
 				if ( j == strArr.length-1 ) { 
-					intArr[i][j] = strArr[i].substring(j);				
+					strArr2[i][j] = strArr[i].substring(j);				
 				} else {
-					intArr[i][j] = strArr[i].substring(j, j+1);
+					strArr2[i][j] = strArr[i].substring(j, j+1);
 				}
-//				System.out.println("intArr[" + i + "]" + "[" + j + "]" + ":" + intArr[i][j]);
-//				if ( intArr[i][j] > intArr[i+1][j] ) {
-//					
-//				}
-			}	
-		}		
+				System.out.println("[" + i + "]" + "[" + j + "]" + " : " + strArr2[i][j]);				
+			}
+//			Arrays.sort(strArr);			
+		}
 	}
+	
+//	public class Temp implements Comparable<Temp> {
+//
+//		@Override
+//		public int compareTo(Temp o) {
+//			o.
+//			return 0;
+//		}
+//
+//		
+//	}
 }
+
+
