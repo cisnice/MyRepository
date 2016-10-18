@@ -24,9 +24,9 @@ public class Exam06 {
 	private static Employee getEmployee(int searchEmpno) {
 		Employee emp = new Employee();
 		
-		Connection conn = null;
+		Connection conn = null;    // null 초기화를 하지 않으면 메모리에 올라가지 않아 try 에서 에러가 나서 finally에서 close 할때 에러가 난다.
 		try {
-			Class.forName("oracle.jdbc.OracleDriver");
+			Class.forName("oracle.jdbc.OracleDriver");		// *.jar 파일을 만들때 옵션을 주면 자동 로딩이 되게 할 수 있다.
 			
 			conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl", "tester1", "kosa12345");
 			String sql = "SELECT * FROM EMP WHERE EMPNO = ?";
@@ -44,14 +44,14 @@ public class Exam06 {
 			
 			rs.close();
 			pstmt.close();
-			conn.close();
-		} catch (Exception e) {
+		} catch (Exception e) {			
+			e.printStackTrace();
+		} finally {
 			try {
 				conn.close();
-			} catch (SQLException e1) {				
-				e1.printStackTrace();
+			} catch (SQLException e) {				
+				e.printStackTrace();
 			}
-			e.printStackTrace();
 		}
 		return emp;
 	}
@@ -80,14 +80,14 @@ public class Exam06 {
 			}
 			rs.close();
 			pstmt.close();
-			conn.close();
-		} catch (Exception e) {
+		} catch (Exception e) {			
+			e.printStackTrace();
+		} finally {
 			try {
 				conn.close();
-			} catch (SQLException e1) {				
-				e1.printStackTrace();
+			} catch (SQLException e) {				
+				e.printStackTrace();
 			}
-			e.printStackTrace();
 		}
 		return list;
 	}
