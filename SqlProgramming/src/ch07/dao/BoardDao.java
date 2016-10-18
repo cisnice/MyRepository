@@ -13,8 +13,9 @@ import ch07.dto.Board;
 public class BoardDao {
 
 	public Board selectByBno(int bno) {
-		Connection conn = null;
 		Board board = null;
+		Connection conn = null;
+		
 		try {
 			Class.forName("oracle.jdbc.OracleDriver");
 			conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl", "tester1", "kosa12345");
