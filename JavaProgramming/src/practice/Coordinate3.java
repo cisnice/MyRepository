@@ -28,7 +28,7 @@ public class Coordinate3 {
 			
 			for (int i = 0; i < str.length(); i++) {
 				intArr1[i] = str.substring(i, i+1);
-			}
+			}			
 			
 			if ( str.length()==3 ) {
 				if (Integer.parseInt(intArr1[0]) != Integer.parseInt(intArr1[2])) {
