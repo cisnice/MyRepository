@@ -15,7 +15,7 @@ public class TestBoardDao {
 
 //		testInsert();
 //		testSelectByBno();
-		testSelectByBtitle();
+//		testSelectByBtitle();
 //		testUpdate();
 //		testDeleteByBno();
 //		
@@ -31,12 +31,12 @@ public class TestBoardDao {
 			dao.setConn(conn);
 			
 			Board board = new Board();
-			board.setBno(10);
+//			board.setBno(1);   -- SEQUENCE에서 증가
 			board.setBtitle("제목10");
 			board.setBcontent("내용10");
 			board.setBwriter("USER10");
-			board.setBhitcount(10);
-			board.setBdate(new Date());
+//			board.setBhitcount(0);
+//			board.setBdate(new Date());
 			
 			int rowNo = dao.insert(board);
 			System.out.println(rowNo + " 행이 저장 됨");
@@ -61,7 +61,7 @@ public class TestBoardDao {
 			BoardDao dao = new BoardDao();
 			dao.setConn(conn);
 			
-			Board board = dao.selectByBno(10);
+			Board board = dao.selectByBno(1);
 			if ( board != null) {
 				System.out.print(board.getBno() + " : ");
 				System.out.print(board.getBtitle() + " : ");
@@ -125,11 +125,11 @@ public class TestBoardDao {
 			dao.setConn(conn);
 			
 			Board board = new Board();
-			board.setBno(10);
-			board.setBtitle("제목11");
-			board.setBcontent("내용11");
-			board.setBwriter("USER11");
-			board.setBhitcount(11);
+			board.setBno(1);
+			board.setBtitle("제목2");
+			board.setBcontent("내용2");
+			board.setBwriter("USER10");
+			board.setBhitcount(5);
 			board.setBdate(new Date());
 			
 			int rowNo = dao.update(board);
@@ -156,7 +156,7 @@ public class TestBoardDao {
 			BoardDao dao = new BoardDao();
 			dao.setConn(conn);
 			
-			int rowNo = dao.deleteByBno(10);
+			int rowNo = dao.deleteByBno(1);
 			System.out.println(rowNo + " 행이 삭제됨");
 			
 		} catch (Exception e) {

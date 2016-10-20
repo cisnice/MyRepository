@@ -19,14 +19,14 @@ public class BoardDao {
 	}
 
 	public int insert(Board board) throws SQLException {
-		String sql = "INSERT INTO BOARD(BNO, BTITLE, BCONTENT, BWRITER, BHITCOUNT, BDATE) VALUES(?, ?, ?, ?, ?, ?)";
+		String sql = "INSERT INTO BOARD(BNO, BTITLE, BCONTENT, BWRITER, BHITCOUNT, BDATE) VALUES(SEQ_BOARD_BNO.NEXTVAL, ?, ?, ?, 0, SYSDATE)";
 		PreparedStatement pstmt = conn.prepareStatement(sql);
-		pstmt.setInt(1, board.getBno());
-		pstmt.setString(2, board.getBtitle());
-		pstmt.setString(3, board.getBcontent());
-		pstmt.setString(4, board.getBwriter());
-		pstmt.setInt(5, board.getBhitcount());
-		pstmt.setDate(6, new Date(board.getBdate().getTime()));
+//		pstmt.setInt(1, board.getBno());
+		pstmt.setString(1, board.getBtitle());
+		pstmt.setString(2, board.getBcontent());
+		pstmt.setString(3, board.getBwriter());
+//		pstmt.setInt(5, board.getBhitcount());		//DEFAULT 값 0
+//		pstmt.setDate(6, new Date(board.getBdate().getTime()));
 		
 		int rowNo = pstmt.executeUpdate();
 		pstmt.close();
