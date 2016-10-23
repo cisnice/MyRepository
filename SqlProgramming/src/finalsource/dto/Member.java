@@ -5,15 +5,11 @@ import java.util.Date;
 public class Member {
 	private String mid;
 	private String mname;
+	private String mpassword;
 	private int mage;
 	private Date mbirth;
 	
-	public Date getMbirth() {
-		return mbirth;
-	}
-	public void setMbirth(Date mbirth) {
-		this.mbirth = mbirth;
-	}
+	
 	public String getMid() {
 		return mid;
 	}
@@ -25,11 +21,24 @@ public class Member {
 	}
 	public void setMname(String mname) {
 		this.mname = mname;
+	}	
+
+	public String getMpassword() {
+		return mpassword;
+	}
+	public void setMpassword(String mpassword) {
+		this.mpassword = mpassword;
 	}
 	public int getMage() {
 		return mage;
 	}
 	public void setMage(int mage) {
 		this.mage = mage;
+	}	
+	public Date getMbirth() {
+		return mbirth;
+	}
+	public void setMbirth(Date mbirth) {
+		this.mbirth = mbirth;
 	}
 }
