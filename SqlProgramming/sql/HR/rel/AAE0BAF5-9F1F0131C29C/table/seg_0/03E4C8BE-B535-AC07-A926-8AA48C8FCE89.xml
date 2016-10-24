@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="03E4C8BE-B535-AC07-A926-8AA48C8FCE89" schemaObject="0BFB419D-560A-25EB-7488-9DD15972D734" name="LEFTTABLE">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>LEFTTABLE</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 05:24:17 UTC</createdTime>
+<ownerDesignName>HR</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="MID" id="C3BF8359-A450-940B-85BD-6AE4C45B7A57">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>LEFTTABLE</sourceObjSchema>
+<sourceObjName>MID</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 05:24:17 UTC</createdTime>
+<ownerDesignName>HR</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 BYTE</dataTypeSize>
+<ownDataTypeParameters>10 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MNAME" id="C298F05B-1D41-9CAB-A7AB-87DB25E9758B">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>LEFTTABLE</sourceObjSchema>
+<sourceObjName>MNAME</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 05:24:17 UTC</createdTime>
+<ownerDesignName>HR</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 BYTE</dataTypeSize>
+<ownDataTypeParameters>10 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3EA7F5F2-52E7-AED2-26DC-BF515187DBE0" schemaObject="0BFB419D-560A-25EB-7488-9DD15972D734" name="LEFTTABLE_PK">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>SYS_C0011065</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 05:24:17 UTC</createdTime>
+<ownerDesignName>HR</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C3BF8359-A450-940B-85BD-6AE4C45B7A57"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,39 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="LEFTTABLE" directorySegmentName="seg_0" id="03E4C8BE-B535-AC07-A926-8AA48C8FCE89">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 05:24:17 UTC</createdTime>
+<ownerDesignName>HR</ownerDesignName>
+<schemaObject>0BFB419D-560A-25EB-7488-9DD15972D734</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>6D2D5A49-FFC0-63C1-D8D2-7FFDDA8E4A53</segment>
+<tableSpace>7A794158-7BA5-B9F6-2507-9357A4AA911B</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="MNAME" id="C298F05B-1D41-9CAB-A7AB-87DB25E9758B">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 05:24:17 UTC</createdTime>
+<ownerDesignName>HR</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MID" id="C3BF8359-A450-940B-85BD-6AE4C45B7A57">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 05:24:17 UTC</createdTime>
+<ownerDesignName>HR</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="LEFTTABLE_PK" id="3EA7F5F2-52E7-AED2-26DC-BF515187DBE0">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 05:24:18 UTC</createdTime>
+<ownerDesignName>HR</ownerDesignName>
+<schemaObject>0BFB419D-560A-25EB-7488-9DD15972D734</schemaObject>
+<segment>781826B8-D391-5342-EFAD-7BCD161C6FD0</segment>
+<tableSpace>7A794158-7BA5-B9F6-2507-9357A4AA911B</tableSpace>
+<indexSegment>781826B8-D391-5342-EFAD-7BCD161C6FD0</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

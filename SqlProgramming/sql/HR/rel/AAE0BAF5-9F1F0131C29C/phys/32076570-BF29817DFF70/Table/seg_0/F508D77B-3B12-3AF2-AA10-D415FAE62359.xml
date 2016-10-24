@@ -1,0 +1,51 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="REGIONS" directorySegmentName="seg_0" id="F508D77B-3B12-3AF2-AA10-D415FAE62359">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:34:40 UTC</createdTime>
+<ownerDesignName>HR</ownerDesignName>
+<schemaObject>0BFB419D-560A-25EB-7488-9DD15972D734</schemaObject>
+<logging>NO</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>6D2D5A49-FFC0-63C1-D8D2-7FFDDA8E4A53</segment>
+<tableSpace>16A99014-DB65-004C-44E2-1A697B574973</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="REGION_NAME" id="7ABD1022-34E0-B4B6-2815-3160CEDB3208">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:34:40 UTC</createdTime>
+<ownerDesignName>HR</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="REGION_ID" id="7DA978EE-BAB5-234B-62A4-AC8E0512086C">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:34:40 UTC</createdTime>
+<ownerDesignName>HR</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="REG_ID_PK" id="DFE8D3ED-501D-E502-8C5C-A098A77CD117">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:34:40 UTC</createdTime>
+<ownerDesignName>HR</ownerDesignName>
+<schemaObject>0BFB419D-560A-25EB-7488-9DD15972D734</schemaObject>
+<logging>NO</logging>
+<segment>781826B8-D391-5342-EFAD-7BCD161C6FD0</segment>
+<tableSpace>16A99014-DB65-004C-44E2-1A697B574973</tableSpace>
+</IndexProxy>
+</indexProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="REG_ID_PK" id="423AE51C-461B-81B1-08B2-030A2F47EE4C">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:34:40 UTC</createdTime>
+<ownerDesignName>HR</ownerDesignName>
+<logging>NO</logging>
+<segment>781826B8-D391-5342-EFAD-7BCD161C6FD0</segment>
+<tableSpace>16A99014-DB65-004C-44E2-1A697B574973</tableSpace>
+<existingIndex>DFE8D3ED-501D-E502-8C5C-A098A77CD117</existingIndex>
+<indexSegment>781826B8-D391-5342-EFAD-7BCD161C6FD0</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

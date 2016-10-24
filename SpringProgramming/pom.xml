@@ -115,7 +115,29 @@
 			<artifactId>junit</artifactId>
 			<version>4.7</version>
 			<scope>test</scope>
-		</dependency>        
+		</dependency>   
+		
+		<!-- Connection Pool -->   
+		<!--http://search.maven.org/ 에서 spring-jdbc 검색. 현재 org.springframework-version 과 같은것 선택 -->
+		<dependency>
+    		<groupId>org.springframework</groupId>
+    		<artifactId>spring-jdbc</artifactId>
+    		<version>${org.springframework-version}</version>
+		</dependency>     
+		
+		<!--http://search.maven.org/ 에서 c3p0 최신버전 검색-->
+		<dependency>
+		    <groupId>c3p0</groupId>
+		    <artifactId>c3p0</artifactId>
+		    <version>0.9.1.2</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.oracle</groupId>
+		    <artifactId>ojdbc6</artifactId>
+		    <version>11.2.0.4</version>
+		</dependency>		
+		     
 	</dependencies>
     <build>
         <plugins>

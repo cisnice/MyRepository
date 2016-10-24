@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="89C77910-7265-37A5-2C7E-CB6386DA71C6" schemaObject="0BFB419D-560A-25EB-7488-9DD15972D734" name="RIGHTTABLE">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>RIGHTTABLE</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 05:24:28 UTC</createdTime>
+<ownerDesignName>HR</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="BNO" id="F13E1DD6-0E4C-D9D1-CD41-D20606AD9585">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>RIGHTTABLE</sourceObjSchema>
+<sourceObjName>BNO</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 05:24:28 UTC</createdTime>
+<ownerDesignName>HR</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,5,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BTITLE" id="A294E78C-11A3-E670-BF84-899D820622EA">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>RIGHTTABLE</sourceObjSchema>
+<sourceObjName>BTITLE</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 05:24:28 UTC</createdTime>
+<ownerDesignName>HR</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BWRITER" id="2F9B792E-4E3F-2739-750C-00E4FD4D7D89">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>RIGHTTABLE</sourceObjSchema>
+<sourceObjName>BWRITER</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 05:24:28 UTC</createdTime>
+<ownerDesignName>HR</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 BYTE</dataTypeSize>
+<ownDataTypeParameters>10 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B1A73F06-D794-69BA-06B7-5573185A5F94" referredColumn="C3BF8359-A450-940B-85BD-6AE4C45B7A57"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B8497B22-8865-13EB-BC01-B922274E78F7" schemaObject="0BFB419D-560A-25EB-7488-9DD15972D734" name="RIGHTTABLE_PK">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>SYS_C0011067</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 05:24:28 UTC</createdTime>
+<ownerDesignName>HR</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F13E1DD6-0E4C-D9D1-CD41-D20606AD9585"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D2E8C32C-36CE-2C0E-3646-17A4AEA72560" name="SYS_C0011068">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 05:24:28 UTC</createdTime>
+<ownerDesignName>HR</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2F9B792E-4E3F-2739-750C-00E4FD4D7D89"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
