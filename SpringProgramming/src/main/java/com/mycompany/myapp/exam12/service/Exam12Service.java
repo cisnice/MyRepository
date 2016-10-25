@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.mycompany.myapp.exam12.dao.MemberDao;
+import com.mycompany.myapp.exam12.dao.Exam12Dao;
 import com.mycompany.myapp.exam12.dto.Member;
 
 @Component
@@ -21,7 +21,7 @@ public class Exam12Service {
 	private DataSource dataSource;	  // DataSource 인터페이스를 구현한 관리객체가 자동으로 들어온다.  
  												 // servlet-context.xml 에 설정한 Connection Pool 에서 생성한 dataSource 객체가 주입된다.
 	@Autowired
-	private MemberDao dao;
+	private Exam12Dao dao;
 
 	public void join(Member member) {
 		Connection conn = null;

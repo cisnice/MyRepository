@@ -34,6 +34,17 @@
 	<servlet-mapping>
 		<servlet-name>appServlet</servlet-name>
 		<url-pattern>/</url-pattern>						<!-- http://localhost:8080/myapp/ 이 생략됨. '/' 뒤에 무엇이 오든지 상관없이 실행된다. -->
-	</servlet-mapping>  
+	</servlet-mapping>	
+	
+	<!-- context.xml에서 생성한 Connection Pool 참조.  --> 
+	<!-- context.xml 은 외부 톰캣에서 풀을 잡고 있으면 안되기 때문에 C:\Program Files\Apache Software Foundation\Tomcat 8.0\conf 에서 수정하고 서버 재시작해서 불러온다. -->
+	<!--	
+	<resource-ref>
+		<description>Oracle DataSource</description>
+		<res-ref-name>jdbc/orcl</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>
+	</resource-ref>  
+	-->
   
 </web-app>
