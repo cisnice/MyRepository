@@ -42,7 +42,7 @@ public class PhotoBoardDao {
 		return row;
 	}
 	
-	public int delete(String bno) {
+	public int delete(int bno) {
 		String sql = "delete from photoboard where bno=?";
 		int row = jdbcTemplate.update(sql, bno);
 		return row;

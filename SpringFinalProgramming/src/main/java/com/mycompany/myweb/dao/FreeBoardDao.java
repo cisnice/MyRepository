@@ -38,7 +38,7 @@ public class FreeBoardDao {
 		return row;
 	}
 	
-	public int delete(String bno) {
+	public int delete(int bno) {
 		String sql = "delete from freeboard where bno=?";
 		int row = jdbcTemplate.update(sql, bno);
 		return row;
