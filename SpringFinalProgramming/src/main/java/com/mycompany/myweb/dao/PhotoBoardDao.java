@@ -72,10 +72,10 @@ public class PhotoBoardDao {
 	// 목록 가져오기 - 페이징 처리
 	public List<PhotoBoard> selectByPage(int pageNo, int rowsPerPage) {
 		String sql = "";
-		sql += "SELECT RN, BNO, BTITLE, BHITCOUNT, SAVEDFILE ";
+		sql += "SELECT RN, BNO, BTITLE, BHITCOUNT, BDATE, SAVEDFILE ";
 		sql += "FROM ( ";
-		sql += "      SELECT ROWNUM AS RN, BNO, BTITLE, BHITCOUNT, SAVEDFILE ";
-		sql += "        FROM ( SELECT BNO, BTITLE, BHITCOUNT, SAVEDFILE FROM PHOTOBOARD ORDER BY BNO DESC) ";
+		sql += "      SELECT ROWNUM AS RN, BNO, BTITLE, BHITCOUNT, BDATE, SAVEDFILE ";
+		sql += "        FROM ( SELECT BNO, BTITLE, BHITCOUNT, BDATE, SAVEDFILE FROM PHOTOBOARD ORDER BY BNO DESC) ";
 		sql += "	       WHERE ROWNUM <= ? ";
 		sql += "      ) ";
 		sql += "WHERE RN >= ? ";
@@ -89,6 +89,7 @@ public class PhotoBoardDao {
 				photoBoard.setBno(rs.getInt("bno"));
 				photoBoard.setBtitle(rs.getString("btitle"));
 				photoBoard.setBhitcount(rs.getInt("bhitcount"));
+				photoBoard.setBdate(rs.getDate("bdate"));
 				photoBoard.setSavedfile(rs.getString("savedfile"));				
 				return photoBoard;
 			}

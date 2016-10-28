@@ -5,14 +5,17 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.mycompany.myweb.dto.Member;
 import com.mycompany.myweb.service.MemberService;
 
 @Controller
 @RequestMapping("/member")
+//@SessionAttributes("mid")
 public class MemberController {
 	
 	@Autowired
@@ -86,5 +89,12 @@ public class MemberController {
 		model.addAttribute("member", member);
 		return "member/info";
 	}
+	
+/*	@RequestMapping("/info")		// SessionAttribute 사용 시, 로그인이 되어있어 이미 저장이 되어있는 상태에서만 사용 가능 
+	public String info(String mpassword, @ModelAttribute("mid") String mid, Model model) {		
+		Member member = memberService.info(mid, mpassword);
+		model.addAttribute("member", member);
+		return "member/info";
+	}*/
 	
 }

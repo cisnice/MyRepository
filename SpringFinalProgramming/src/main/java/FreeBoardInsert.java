@@ -2,8 +2,10 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
-public class Test {
+public class FreeBoardInsert {
 	public static void main(String[] args) throws Exception {
+		
+		// freeboard 에 데이터 삽입
 		Class.forName("oracle.jdbc.OracleDriver");
 		Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl", "final", "kosa12345");
 		String sql = "insert into freeboard(bno, btitle, bcontent, bwriter, bhitcount, bdate) values(seq_freeboard_bno.nextval, ?, ?, ?, 0, sysdate)";
