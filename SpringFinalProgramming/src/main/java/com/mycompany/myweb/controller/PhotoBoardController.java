@@ -145,4 +145,40 @@ public class PhotoBoardController {
 		model.addAttribute("photoBoard", photoBoard);
 		return "photoboard/info";
 	}
+	
+	@RequestMapping(value="/modify", method=RequestMethod.GET)
+	public String modifyForm(int bno, Model model) {
+		PhotoBoard photoBoard = photoBoardService.info(bno);
+		model.addAttribute("photoBoard", photoBoard);
+		return "photoboard/modify";
+	}
+	
+	@RequestMapping(value="/modify", method=RequestMethod.POST)
+	public String modify(PhotoBoard photoBoard, HttpSession session) {
+		PhotoBoard dbPhotoBoard = photoBoardService.info(photoBoard.getBno());
+		photoBoard.setBhitcount(dbPhotoBoard.getBhitcount());
+		
+		try {
+			photoBoard.setOriginalfile(photoBoard.getPhoto().getOriginalFilename());
+			String savedfile = new Date().getTime() + photoBoard.getPhoto().getOriginalFilename();		
+			String realpath = session.getServletContext().getRealPath("/WEB-INF/photo/" + savedfile);	
+			photoBoard.getPhoto().transferTo(new File(realpath));													
+			photoBoard.setSavedfile(savedfile);
+			
+			photoBoard.setMimetype(photoBoard.getPhoto().getContentType());
+			
+			int result = photoBoardService.modify(photoBoard);			
+			
+			return "redirect:/photoboard/list";
+		} catch (Exception e) {
+			e.printStackTrace();
+			return "photoboard/modify";
+		}
+	}
+	
+	@RequestMapping("/remove")
+	public String remove(int bno) {	
+		photoBoardService.remove(bno);
+		return "redirect:/photoboard/list";
+	}
 }

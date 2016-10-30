@@ -7,9 +7,10 @@
 	</head>
 	
 	<body>
-		글쓰기
+		글수정
 		<hr/>
-		<form method="post" enctype="multipart/form-data">  
+		<form method="post" enctype="multipart/form-data">
+			<input type="hidden" name="bno" value="${photoBoard.bno}"/>	<!-- hidden type 은 사용자의 눈에 보이지는 않지만 서버에 전송해 준다.  -->
 			<table>
 				<tr>
 					<td style="background-color:orange; width:70px"> 제목 </td>
@@ -26,7 +27,7 @@
 				 	<td><input type="file" name="photo"/></td>
 				</tr>
 			</table>
-			<input type="submit" value="글쓰기"/>
+			<input type="submit" value="글수정"/>
 		</form>
 	</body>
 </html>
