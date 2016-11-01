@@ -15,6 +15,12 @@
 		4) <a href="04_css_selector.jsp">CSS 선택자</a><br/>	
 		5) <a href="05_css_location.jsp">CSS 작성 위치</a><br/>	
 		6) <a href="06_background.jsp">background 관련 CSS 속성</a><br/>
+		7) <a href="07_icon.jsp">Icon 관련 CSS 속성</a><br/>
+		8) <a href="08_table.jsp">table 관련 CSS 속성</a><br/>
+		9) <a href="09_location.jsp">location 관련 CSS 속성</a><br/>
+		10) <a href="10_float_layout.jsp">float 속성을 이용한 Layout</a><br/>
+		11) <a href="11_flex_layout.jsp">flex 속성을 이용한 Layout</a><br/>
+		
 		<br/><br/><br/>		
 		
 		<%-- Entities
