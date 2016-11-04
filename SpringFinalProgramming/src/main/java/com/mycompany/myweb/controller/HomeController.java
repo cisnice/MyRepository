@@ -10,8 +10,13 @@ public class HomeController {
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 
 	@RequestMapping("/")							
-	public String home() {								
-		System.out.println("home() 실행1");		
+	public String index() {
+		logger.info("index() 실행2");					
+		return "index";  										
+	}
+	
+	@RequestMapping("/home")							
+	public String home() {
 		logger.info("home() 실행2");					
 		return "home";  										
 	}
