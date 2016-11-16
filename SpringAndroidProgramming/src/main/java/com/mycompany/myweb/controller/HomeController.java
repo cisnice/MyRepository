@@ -49,16 +49,16 @@ public class HomeController {
 	@RequestMapping("/restaurantList")
 	public String restaurantList(Model model) {
 		   List<Restaurant> list = new ArrayList<>();
-	       list.add(new Restaurant("food01.png", "food01_large.png", "인테리어 조명1", "35,000 Won", "Information"));
-	       list.add(new Restaurant("food02.png", "food02_large.png", "인테리어 조명2", "15,000 Won", "about"));
-	       list.add(new Restaurant("food03.png", "food03_large.png", "인테리어 조명3", "25,000 Won", "popular"));
-	       list.add(new Restaurant("food04.png", "food04_large.png", "인테리어 조명4", "30,000 Won", "Korean food dishes"));
-	       list.add(new Restaurant("food05.png", "food05_large.png", "인테리어 조명5", "60,000 Won", "local restaurant listias in the Tri-state area."));
-	       list.add(new Restaurant("food01.png", "food01_large.png", "인테리어 조명6", "35,000 Won", "Information"));
-	       list.add(new Restaurant("food02.png", "food02_large.png", "인테리어 조명7", "15,000 Won", "about"));
-	       list.add(new Restaurant("food03.png", "food03_large.png", "인테리어 조명8", "25,000 Won", "popular"));
-	       list.add(new Restaurant("food04.png", "food04_large.png", "인테리어 조명9", "30,000 Won", "Korean food dishes"));
-	       list.add(new Restaurant("food05.png", "food05_large.png", "인테리어 조명10", "60,000 Won", "local restaurant listias in the Tri-state area."));
+	       list.add(new Restaurant("food01.png", "food01_large.png", "음식1", "35,000 Won", "Information"));
+	       list.add(new Restaurant("food02.png", "food02_large.png", "음식2", "15,000 Won", "about"));
+	       list.add(new Restaurant("food03.png", "food03_large.png", "음식3", "25,000 Won", "popular"));
+	       list.add(new Restaurant("food04.png", "food04_large.png", "음식4", "30,000 Won", "Korean food dishes"));
+	       list.add(new Restaurant("food05.png", "food05_large.png", "음식5", "60,000 Won", "local restaurant listias in the Tri-state area."));
+	       list.add(new Restaurant("food01.png", "food01_large.png", "음식1", "35,000 Won", "Information"));
+	       list.add(new Restaurant("food02.png", "food02_large.png", "음식2", "15,000 Won", "about"));
+	       list.add(new Restaurant("food03.png", "food03_large.png", "음식3", "25,000 Won", "popular"));
+	       list.add(new Restaurant("food04.png", "food04_large.png", "음식4", "30,000 Won", "Korean food dishes"));
+	       list.add(new Restaurant("food05.png", "food05_large.png", "음식5", "60,000 Won", "local restaurant listias in the Tri-state area."));
 	       
 	       model.addAttribute("list", list);
 	       return "restaurantList";
